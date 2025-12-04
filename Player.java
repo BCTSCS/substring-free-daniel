@@ -28,9 +28,7 @@ public class Player {
        * the instance variable record.
        * -----------------------------------------------------------------------------
        */
-      
-      
-      return "";
+      int dashIndex = record.indexOf("-");
+      return record.substring(dashIndex + 3);
     }
-    
-  }
+}
