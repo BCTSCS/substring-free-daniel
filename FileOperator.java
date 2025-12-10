@@ -30,16 +30,13 @@ public final class FileOperator{
         try{
             myFile = new File(filename);
             fileReader = new Scanner(myFile);
-
-            while(fileReader.hasNextLine()){
-                list.add(fileReader.nextLine());
-            }
         }catch(FileNotFoundException e){
             System.out.println("Error");
         }finally{
              System.out.println("continue");
+        }
 }
-        public ArrayList<String> getStringData(String filename) {
+        public static ArrayList<String> getStringData(String filename) {
             createFile(filename);
             ArrayList<String> list = new ArrayList<>();
     
