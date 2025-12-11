@@ -26,13 +26,17 @@ public final class FileOperator {
    
    }
 
-   public ArrayList<String> getStringData(String filename){
+   public static ArrayList<String> getStringData(String filename){
     createFile(filename);
     ArrayList<String> result = new ArrayList<String>();
     while (fileReader.hasNextLine()) { 
         result.add(fileReader.nextLine());
     }
     return result;
+   }
+
+   public static void main(String[] args) {
+       System.out.println(FileOperator.getStringData("poem.txt"));
    }
 
   }
